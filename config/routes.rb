@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   # get 'logout', to: 'sessions#destroy', as: :sign_out
 
   root to: 'players#index'
+  resources :games
 end

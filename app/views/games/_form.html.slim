@@ -1,0 +1,10 @@
+= bootstrap_form_for @game do |f|
+  .field
+    = f.collection_select :winner_id, Player.all, :id, :full_name
+  .field
+    = f.collection_select :loser_id, Player.all, :id, :full_name
+  .field
+    = f.check_box :draw
+  .actions.d-flex.justify-content-between
+    button type="button" class="btn btn-outline-secondary" data-dismiss="modal" Discard
+    = f.submit 'Submit', class: 'btn btn-primary'

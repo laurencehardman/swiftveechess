@@ -7,6 +7,8 @@ ruby '2.7.0'
 gem 'sorcery' # Best authentication - better than devise
 gem 'slim-rails' # My fav templating engine. Plain and simple
 gem 'bootstrap' # It looks cool B-)
+gem 'bootstrap_form' # Duh
+gem 'jquery-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

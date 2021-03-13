@@ -7,17 +7,14 @@ h1 Player Overview
       th Games Played
       th Full Name
       th Birthdate
-      th ID
     tbody
       - @players.each do |player|
         tr
           td
             b = player.rank
           td
-            b = player.game_count
+            = player.game_count
           td
-            b = link_to player.full_name, '#'
+            = link_to player.full_name, '#'
           td
             = player.dob
-          td
-            = player.id
