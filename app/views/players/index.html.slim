@@ -1,0 +1,23 @@
+h1 Player Overview
+
+.table-responsive.mt-2 style='max-height: 650px;'
+  table.table.table-striped.table-sm.table-hover.mb-2
+    thead
+      th Ranking
+      th Games Played
+      th Full Name
+      th Birthdate
+      th ID
+    tbody
+      - @players.each do |player|
+        tr
+          td
+            b = player.rank
+          td
+            b = player.game_count
+          td
+            b = link_to player.full_name, '#'
+          td
+            = player.dob
+          td
+            = player.id

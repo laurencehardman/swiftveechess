@@ -4,10 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 # My custom gems of choice (:
+gem 'sorcery' # Best authentication - better than devise
+gem 'slim-rails' # My fav templating engine. Plain and simple
+gem 'bootstrap' # It looks cool B-)
 
-gem 'sorcery'
-gem 'slim-rails'
-gem 'bootstrap'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.5'

@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title
+      | ChessClub
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body.d-flex.flex-column.h-100
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      .container
+        a.navbar-brand href='/'
+          b.h4
+            i SwiftVEE Chess
+        button.navbar-toggler aria-controls="navbar-content" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbar-content" data-toggle="collapse" type="button"
+          span.navbar-toggler-icon
+        #navbar-content.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link href=root_path Home
+
+
+    main.flex-shrink-0
+      - if notice
+        .container
+          .row
+            .col-md-12
+              p.alert.alert-success
+                = notice
+      - if alert
+        .container
+          .row
+            .col-md-12
+              p.alert.alert-danger
+                = alert
+
+      .container= yield
